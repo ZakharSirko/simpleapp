@@ -103,8 +103,8 @@ def preprocess_input(attendance, hours_studied, previous_scores, tutoring_sessio
 
     return df_processed
 
-    # Prediction
-    if st.button("Predict Exame Score"):
-        input_data = preprocess_input(attendance, hours_studied, previous_scores, tutoring_sessions, access_to_resources, parental_involvement, motivation_level, internet_access, family_income, teacher_quality, peer_influence)
-        pred = model.predict(input_data, verbose=0)
-        st.success(f"Estimated exame score: ${pred[0][0]:,.2f}")
+# Prediction
+if st.button("Predict Exam Score"):
+    input_data = preprocess_input(attendance, hours_studied, previous_scores, tutoring_sessions, access_to_resources, parental_involvement, motivation_level, internet_access, family_income, teacher_quality, peer_influence)
+    pred = model.predict(input_data, verbose=0)
+    st.success(f"Estimated exam score: ${pred[0][0]:,.2f}")

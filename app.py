@@ -24,9 +24,12 @@ attendance = st.number_input(
     step=1
 )
 
-hours_studied = st.radio(
+hours_studied = st.number_input(
     "How much hours student study",
-    ["Manual", "Automatic", "Semi-Automatic"]
+    min_value=0,
+    max_value=100,
+    value=50,
+    step=1
 )
 
 previous_scores = st.number_input(
